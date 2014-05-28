@@ -17,8 +17,8 @@ function TodoCtrl($scope) {
 
 	$scope.clearCompleted = function () {
 		console.log('hit Clear Completed function');
-		//$scope.todos = _.filter($scope.todos, function (todo) 
-		$scope.todos = $scope.todos.filter(function(todo){
+		$scope.todos = _.filter($scope.todos, function (todo) {
+		//$scope.todos = $scope.todos.filter(function(todo){	//alternate solution not leveraging underscorejs
 			return !todo.done;
 		})
 	}
