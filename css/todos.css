@@ -4,5 +4,5 @@ body {
 
 .done-true {
 	text-decoration: line-through;
-	color: gray;
+	color: lightgray;
 }
