@@ -14,23 +14,31 @@
 
 <body>
 
-<div ng-controller="TodoCtrl">
+<div ng-controller="TodoCtrl" class="container-fluid input-group">
+<div class="row">
+<div class="col-xs-4 col-md-offset-4">
+
 	<h1> Total Todos: {{getTotalTodos()}}</h1>
-	<ul class="unstyled">
-	<li ng-repeat="todo in todos">
+	<ul class="list-group">
+	<li ng-repeat="todo in todos" class="list-group-item">
 		<input type="checkbox" ng-model="todo.done" />
 		<span class="done-{{todo.done}}">{{todo.text}}</span>
 	</li>
 	</ul>
 	
-	<form class="form-horizontal">
-		<input type="text" ng-model="formTodoText" ng-model-instant />
-		<button class="btn btn-primary" ng-click="addTodo()"><span class="glyphicon glyphicon-plus"></span> Add</button>
+	<form class="input-group">
+		<input type="text" ng-model="formTodoText" ng-model-instant class="form-control" />
+		<span class="input-group-btn">
+			<button class="btn btn-primary" ng-click="addTodo()"><span class="glyphicon glyphicon-plus"></span> Add</button>
+		</span>
 	</form> 
 
+	<br />
 	<button class="btn btn-default btn-sm" ng-click="clearCompleted()"><span class="glyphicon glyphicon-trash"></span> Clear Completed</button>
 
-</div>
+</div><!-- /col -->
+</div><!-- /row -->
+</div><!-- /container -->
 
 </body>
 </html>
